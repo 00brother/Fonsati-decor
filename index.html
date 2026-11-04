@@ -325,63 +325,64 @@
     </section>
 
     <!-- ==========================================
-         SERVIÇOS EM DESTAQUE
+         SERVIÇOS EM DESTAQUE — 2 colunas no mobile
     ========================================== -->
     <section id="servicos" class="py-20 bg-brand-bg">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
           <span class="text-xs font-semibold uppercase tracking-widest text-brand-terracotta mb-2 block">Soluções Completas</span>
           <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold text-brand-charcoal">Como podemos transformar seu espaço?</h2>
-          <p class="text-brand-muted mt-4 text-base sm:text-lg">Oferecemos três modalidades de serviços pensadas para atender todas as necessidades da sua casa.</p>
+          <p class="text-brand-muted mt-3 sm:mt-4 text-sm sm:text-base lg:text-lg">Oferecemos três modalidades de serviços pensadas para atender todas as necessidades da sua casa.</p>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-8">
-          
+        <!-- 2 colunas no mobile (estilo Shopee) / 3 colunas no desktop -->
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-2.5 sm:gap-5 lg:gap-8">
+
           <!-- Card 1: Fabricação -->
-          <div class="bg-brand-surface rounded-2xl p-8 border border-brand-border hover:border-brand-terracotta/50 shadow-sm hover:shadow-luxury transition-all duration-300 flex flex-col justify-between group">
+          <div class="bg-brand-surface rounded-xl sm:rounded-2xl p-3 sm:p-6 lg:p-8 border border-brand-border hover:border-brand-terracotta/50 shadow-sm hover:shadow-luxury transition-all duration-300 flex flex-col justify-between group">
             <div>
-              <div class="w-14 h-14 rounded-xl bg-brand-sand text-brand-terracotta flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L5.595 15.12a2 2 0 00-1.806.547M16 4h4l1 5h-1v12a1 1 0 01-1 1H5a1 1 0 01-1-1V9H3l1-5h4m8 0a2 2 0 10-4 0m4 0a2 2 0 11-4 0"/></svg>
+              <div class="w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 rounded-lg sm:rounded-xl bg-brand-sand text-brand-terracotta flex items-center justify-center mb-2.5 sm:mb-4 lg:mb-6 group-hover:scale-110 transition-transform">
+                <svg class="w-5 h-5 sm:w-6 sm:h-6 lg:w-7 lg:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L5.595 15.12a2 2 0 00-1.806.547M16 4h4l1 5h-1v12a1 1 0 01-1 1H5a1 1 0 01-1-1V9H3l1-5h4m8 0a2 2 0 10-4 0m4 0a2 2 0 11-4 0"/></svg>
               </div>
-              <h3 class="font-serif text-2xl font-semibold text-brand-charcoal mb-3">Fabricação Sob Medida</h3>
-              <p class="text-brand-muted text-sm leading-relaxed mb-6">
+              <h3 class="font-serif text-sm sm:text-lg lg:text-2xl font-semibold text-brand-charcoal mb-1.5 sm:mb-2 lg:mb-3 leading-tight">Fabricação Sob Medida</h3>
+              <p class="text-[10px] sm:text-xs lg:text-sm text-brand-muted leading-relaxed mb-3 sm:mb-5 lg:mb-6 line-clamp-3 sm:line-clamp-none">
                 Desenvolvemos o estofado do zero de acordo com a planta da sua casa. Você escolhe o tamanho exato, a densidade do assento, a cor e a textura do tecido.
               </p>
             </div>
-            <a href="https://wa.me/5544999999999?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20fabrica%C3%A7%C3%A3o%20sob%20medida." target="_blank" rel="noopener" class="inline-flex items-center text-xs font-bold uppercase tracking-wider text-brand-terracotta group-hover:text-brand-terracottaDark">
+            <a href="https://wa.me/5544999999999?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20fabrica%C3%A7%C3%A3o%20sob%20medida." target="_blank" rel="noopener" class="inline-flex items-center text-[9px] sm:text-[10px] lg:text-xs font-bold uppercase tracking-wider text-brand-terracotta group-hover:text-brand-terracottaDark leading-tight">
               Solicitar Fabricação &rarr;
             </a>
           </div>
 
           <!-- Card 2: Reforma Premium -->
-          <div class="bg-brand-surface rounded-2xl p-8 border border-brand-border hover:border-brand-terracotta/50 shadow-sm hover:shadow-luxury transition-all duration-300 flex flex-col justify-between group">
+          <div class="bg-brand-surface rounded-xl sm:rounded-2xl p-3 sm:p-6 lg:p-8 border border-brand-border hover:border-brand-terracotta/50 shadow-sm hover:shadow-luxury transition-all duration-300 flex flex-col justify-between group">
             <div>
-              <div class="w-14 h-14 rounded-xl bg-brand-sand text-brand-terracotta flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+              <div class="w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 rounded-lg sm:rounded-xl bg-brand-sand text-brand-terracotta flex items-center justify-center mb-2.5 sm:mb-4 lg:mb-6 group-hover:scale-110 transition-transform">
+                <svg class="w-5 h-5 sm:w-6 sm:h-6 lg:w-7 lg:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
               </div>
-              <h3 class="font-serif text-2xl font-semibold text-brand-charcoal mb-3">Reforma & Restauração</h3>
-              <p class="text-brand-muted text-sm leading-relaxed mb-6">
+              <h3 class="font-serif text-sm sm:text-lg lg:text-2xl font-semibold text-brand-charcoal mb-1.5 sm:mb-2 lg:mb-3 leading-tight">Reforma & Restauração</h3>
+              <p class="text-[10px] sm:text-xs lg:text-sm text-brand-muted leading-relaxed mb-3 sm:mb-5 lg:mb-6 line-clamp-3 sm:line-clamp-none">
                 Seu sofá antigo novo de novo. Substituto completo de revestimento, reforço de percintas elásticas, troca de mola ensacada e renovação de espumas.
               </p>
             </div>
-            <a href="https://wa.me/5544999999999?text=Ol%C3%A1!%20Gostaria%20de%20or%C3%A7ar%20uma%20reforma%20de%20estofado." target="_blank" rel="noopener" class="inline-flex items-center text-xs font-bold uppercase tracking-wider text-brand-terracotta group-hover:text-brand-terracottaDark">
+            <a href="https://wa.me/5544999999999?text=Ol%C3%A1!%20Gostaria%20de%20or%C3%A7ar%20uma%20reforma%20de%20estofado." target="_blank" rel="noopener" class="inline-flex items-center text-[9px] sm:text-[10px] lg:text-xs font-bold uppercase tracking-wider text-brand-terracotta group-hover:text-brand-terracottaDark leading-tight">
               Orcar Reforma &rarr;
             </a>
           </div>
 
-          <!-- Card 3: Pronta Entrega / Venda Directa -->
-          <div class="bg-brand-surface rounded-2xl p-8 border border-brand-border hover:border-brand-terracotta/50 shadow-sm hover:shadow-luxury transition-all duration-300 flex flex-col justify-between group">
+          <!-- Card 3: Pronta Entrega — ocupa a linha inteira no mobile -->
+          <div class="col-span-2 md:col-span-1 bg-brand-surface rounded-xl sm:rounded-2xl p-3 sm:p-6 lg:p-8 border border-brand-border hover:border-brand-terracotta/50 shadow-sm hover:shadow-luxury transition-all duration-300 flex flex-col justify-between group">
             <div>
-              <div class="w-14 h-14 rounded-xl bg-brand-sand text-brand-terracotta flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+              <div class="w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 rounded-lg sm:rounded-xl bg-brand-sand text-brand-terracotta flex items-center justify-center mb-2.5 sm:mb-4 lg:mb-6 group-hover:scale-110 transition-transform">
+                <svg class="w-5 h-5 sm:w-6 sm:h-6 lg:w-7 lg:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
               </div>
-              <h3 class="font-serif text-2xl font-semibold text-brand-charcoal mb-3">Pronta Entrega</h3>
-              <p class="text-brand-muted text-sm leading-relaxed mb-6">
+              <h3 class="font-serif text-sm sm:text-lg lg:text-2xl font-semibold text-brand-charcoal mb-1.5 sm:mb-2 lg:mb-3 leading-tight">Pronta Entrega</h3>
+              <p class="text-[10px] sm:text-xs lg:text-sm text-brand-muted leading-relaxed mb-3 sm:mb-5 lg:mb-6 line-clamp-3 sm:line-clamp-none">
                 Peças exclusivas disponíveis em nosso showroom com pronta entrega para Arapongas, Londrina, Maringá e região. Leve o conforto sem esperar.
               </p>
             </div>
-            <a href="#catalogo" class="inline-flex items-center text-xs font-bold uppercase tracking-wider text-brand-terracotta group-hover:text-brand-terracottaDark">
+            <a href="#catalogo" class="inline-flex items-center text-[9px] sm:text-[10px] lg:text-xs font-bold uppercase tracking-wider text-brand-terracotta group-hover:text-brand-terracottaDark leading-tight">
               Ver Pronta Entrega &rarr;
             </a>
           </div>
@@ -581,7 +582,7 @@
       <div class="p-6 overflow-y-auto space-y-6">
         
         <!-- Dynamic Photo / SVG Graphic Box -->
-        <div id="modalVisual" class="w-full aspect-square sm:aspect-[16/10] rounded-2xl bg-gradient-to-br from-brand-sand to-brand-copperLight/40 flex items-center justify-center p-6 relative">
+        <div id="modalVisual" class="w-full aspect-square sm:aspect-[16/10] rounded-2xl bg-gradient-to-br from-brand-sand to-brand-copperLight/40 flex items-center justify-center p-6 relative text-brand-terracotta">
           <!-- Injected via JS -->
         </div>
 
@@ -846,7 +847,7 @@
       document.getElementById('modalDesc').textContent = p.descricao;
       document.getElementById('modalMedidas').textContent = p.medidas;
       document.getElementById('modalPrice').textContent = formatBRL(p.preco);
-      document.getElementById('modalVisual').innerHTML = `<div class="w-24 h-24 sm:w-32 sm:h-32 text-brand-terracotta">${p.icon}</div>`;
+      document.getElementById('modalVisual').innerHTML = `<div class="w-24 h-24 sm:w-32 sm:h-32">${p.icon}</div>`;
 
       // WhatsApp Button Dynamic Link
       const msg = encodeURIComponent(`Olá! Gostaria de um orçamento para o produto: *${p.nome}* (${formatBRL(p.preco)}).`);
