@@ -81,20 +81,42 @@
 
 <body class="bg-brand-bg text-brand-charcoal font-sans antialiased selection:bg-brand-terracotta selection:text-white pb-16 md:pb-0 loading-active">
 
+  <!-- ==========================================
+       LOADING SCREEN — Tela de carregamento
+       Logo maior + marca d'água 00brother
+  ========================================== -->
   <div id="loadingScreen" class="fixed inset-0 z-[100] bg-brand-bg flex items-center justify-center">
-    <div class="flex flex-col items-center px-6 text-center">
-      <div class="loading-logo relative w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden border-4 border-brand-terracotta/30 shadow-luxury bg-brand-charcoal flex items-center justify-center">
-        <span class="font-serif text-5xl sm:text-6xl font-bold text-brand-terracotta">F</span>
+    <div class="flex flex-col items-center px-6 text-center w-full max-w-md">
+
+      <!-- Logo maior -->
+      <div class="loading-logo relative w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden border-4 border-brand-terracotta/30 shadow-luxury bg-brand-charcoal flex items-center justify-center">
+        <span class="font-serif text-6xl sm:text-7xl font-bold text-brand-terracotta">F</span>
         <img src="logo.png" alt="Fonsati Decor" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none';">
       </div>
-      <span class="mt-6 font-serif text-2xl sm:text-3xl font-semibold text-brand-charcoal tracking-wide">
+
+      <!-- Nome maior -->
+      <span class="mt-8 font-serif text-3xl sm:text-4xl font-semibold text-brand-charcoal tracking-wide">
         Fonsati <span class="text-brand-terracotta">Decor</span>
       </span>
-      <span class="text-[10px] uppercase tracking-[0.3em] text-brand-muted font-medium mt-1">Estofados · Arapongas</span>
-      <div class="mt-7 w-32 sm:w-40 h-1 bg-brand-sand rounded-full overflow-hidden">
+      <span class="text-xs uppercase tracking-[0.35em] text-brand-muted font-medium mt-2">
+        Estofados · Arapongas
+      </span>
+
+      <!-- Barra maior -->
+      <div class="mt-9 w-48 sm:w-56 h-1.5 bg-brand-sand rounded-full overflow-hidden">
         <div class="loading-bar h-full w-full bg-gradient-to-r from-brand-copperLight via-brand-terracotta to-brand-terracottaDark rounded-full"></div>
       </div>
-      <span class="loading-text mt-4 text-[10px] uppercase tracking-[0.25em] text-brand-muted font-medium">Carregando...</span>
+
+      <!-- Texto carregando -->
+      <span class="loading-text mt-5 text-xs uppercase tracking-[0.3em] text-brand-muted font-medium">
+        Carregando...
+      </span>
+
+      <!-- Marca d'água 00brother -->
+      <span class="mt-14 text-sm font-semibold tracking-[0.4em] text-brand-terracotta/35 select-none pointer-events-none">
+        00brother
+      </span>
+
     </div>
   </div>
 
@@ -122,7 +144,7 @@
         </nav>
 
         <div class="flex items-center gap-3">
-          <a href="https://wa.me/5544999999999?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida." 
+          <a href="https://wa.me/5543998042371?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida." 
              target="_blank" rel="noopener" 
              class="hidden sm:inline-flex items-center justify-center min-h-[44px] px-5 py-2.5 text-xs font-semibold uppercase tracking-wider text-white bg-brand-terracotta hover:bg-brand-terracottaDark rounded-full shadow-sm transition-all duration-200">
              <svg class="w-4 h-4 mr-2 fill-current" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
@@ -144,7 +166,7 @@
         <a href="#servicos" class="mobile-nav-link py-3 border-b border-brand-sand flex justify-between items-center text-brand-charcoal font-serif text-lg">Nossos Serviços <span class="text-xs text-brand-terracotta">03</span></a>
         <a href="#catalogo" class="mobile-nav-link py-3 flex justify-between items-center text-brand-charcoal font-serif text-lg">Catálogo & Modelos <span class="text-xs text-brand-terracotta">04</span></a>
         <div class="pt-4 mt-2">
-          <a href="https://wa.me/5544999999999?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20atendimento." 
+          <a href="https://wa.me/5543998042371?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20atendimento." 
              target="_blank" rel="noopener" 
              class="w-full flex items-center justify-center min-h-[50px] px-6 text-sm font-semibold uppercase tracking-wider text-white bg-emerald-600 hover:bg-emerald-700 rounded-full shadow-md">
              Falar com Atendente no WhatsApp
@@ -157,14 +179,10 @@
   <main>
     <section id="inicio" class="relative pt-28 pb-16 md:pt-36 md:pb-28 overflow-hidden bg-brand-sand">
 
-      <!-- FOTO DE FUNDO — MOBILE e DESKTOP trocam -->
       <div class="absolute inset-0 z-0 overflow-hidden" aria-hidden="true">
-
-        <!-- 📱 MOBILE -->
         <div class="absolute inset-0 bg-cover bg-center block lg:hidden"
              style="background-image: url('Sala%20Aconchegante%20com%20Sof%C3%A1%20Bege%20FRESNEURAL%20(1).png');"></div>
 
-        <!-- 🖥️ DESKTOP -->
         <div class="absolute inset-0 bg-cover bg-center hidden lg:block"
              style="background-image: url('Sala de estar moderna e aconchegante.png');"></div>
 
@@ -196,7 +214,7 @@
             <a href="#catalogo" class="min-h-[52px] inline-flex items-center justify-center px-8 py-3.5 text-sm font-semibold uppercase tracking-wider text-white bg-brand-charcoal hover:bg-brand-charcoalSoft rounded-full shadow-luxury transition-all duration-200">
               Ver Catálogo de Peças
             </a>
-            <a href="https://wa.me/5544999999999?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener" class="min-h-[52px] inline-flex items-center justify-center px-8 py-3.5 text-sm font-semibold uppercase tracking-wider text-brand-charcoal bg-brand-surface/95 backdrop-blur-sm hover:bg-brand-surface border border-brand-border rounded-full shadow-sm transition-all duration-200">
+            <a href="https://wa.me/5543998042371?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener" class="min-h-[52px] inline-flex items-center justify-center px-8 py-3.5 text-sm font-semibold uppercase tracking-wider text-brand-charcoal bg-brand-surface/95 backdrop-blur-sm hover:bg-brand-surface border border-brand-border rounded-full shadow-sm transition-all duration-200">
               Pedir Orçamento Rápido
             </a>
           </div>
@@ -255,7 +273,7 @@
               Trabalhamos diretamente com arquitetos, designers de interiores e proprietários que buscam um produto diferenciado, durável e com acabamento de alto padrão.
             </p>
             <div class="flex flex-wrap gap-4 w-full sm:w-auto">
-              <a href="https://wa.me/5544999999999?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20projeto%20sob%20medida." target="_blank" rel="noopener" class="min-h-[48px] w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 text-xs font-semibold uppercase tracking-wider text-white bg-brand-terracotta hover:bg-brand-terracottaDark rounded-full transition-all">
+              <a href="https://wa.me/5543998042371?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20projeto%20sob%20medida." target="_blank" rel="noopener" class="min-h-[48px] w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 text-xs font-semibold uppercase tracking-wider text-white bg-brand-terracotta hover:bg-brand-terracottaDark rounded-full transition-all">
                 Fazer Projeto Sob Medida
               </a>
             </div>
@@ -286,7 +304,7 @@
                 Desenvolvemos o estofado do zero de acordo com a planta da sua casa. Você escolhe o tamanho exato, a densidade do assento, a cor e a textura do tecido.
               </p>
             </div>
-            <a href="https://wa.me/5544999999999?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20fabrica%C3%A7%C3%A3o%20sob%20medida." target="_blank" rel="noopener" class="inline-flex items-center text-[9px] sm:text-[10px] lg:text-xs font-bold uppercase tracking-wider text-brand-terracotta group-hover:text-brand-terracottaDark leading-tight">
+            <a href="https://wa.me/5543998042371?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20fabrica%C3%A7%C3%A3o%20sob%20medida." target="_blank" rel="noopener" class="inline-flex items-center text-[9px] sm:text-[10px] lg:text-xs font-bold uppercase tracking-wider text-brand-terracotta group-hover:text-brand-terracottaDark leading-tight">
               Solicitar Fabricação &rarr;
             </a>
           </div>
@@ -301,7 +319,7 @@
                 Seu sofá antigo novo de novo. Substituto completo de revestimento, reforço de percintas elásticas, troca de mola ensacada e renovação de espumas.
               </p>
             </div>
-            <a href="https://wa.me/5544999999999?text=Ol%C3%A1!%20Gostaria%20de%20or%C3%A7ar%20uma%20reforma%20de%20estofado." target="_blank" rel="noopener" class="inline-flex items-center text-[9px] sm:text-[10px] lg:text-xs font-bold uppercase tracking-wider text-brand-terracotta group-hover:text-brand-terracottaDark leading-tight">
+            <a href="https://wa.me/5543998042371?text=Ol%C3%A1!%20Gostaria%20de%20or%C3%A7ar%20uma%20reforma%20de%20estofado." target="_blank" rel="noopener" class="inline-flex items-center text-[9px] sm:text-[10px] lg:text-xs font-bold uppercase tracking-wider text-brand-terracotta group-hover:text-brand-terracottaDark leading-tight">
               Orçar Reforma &rarr;
             </a>
           </div>
@@ -370,7 +388,7 @@
             </div>
             <div>
               <h4 class="font-serif font-semibold text-lg text-brand-charcoal">Telefone / WhatsApp</h4>
-              <p class="text-xs text-brand-muted mt-1 leading-relaxed">(44) 99999-9999<br>Atendimento rápido via mensagem.</p>
+              <p class="text-xs text-brand-muted mt-1 leading-relaxed">(43) 99804-2371<br>Atendimento rápido via mensagem.</p>
             </div>
           </div>
           <div class="flex items-start gap-4">
@@ -434,9 +452,24 @@
           <span class="inline-block text-[11px] text-emerald-400 bg-emerald-950/60 border border-emerald-800/50 px-2.5 py-1 rounded-full">● WhatsApp Ativo Hoje</span>
         </div>
       </div>
-      <div class="mt-8 text-center text-xs text-brand-muted flex flex-col sm:flex-row justify-between items-center gap-4">
+
+      <!-- Aviso sobre imagens geradas/editadas por IA -->
+      <div class="mt-8 pt-6 border-t border-white/5 max-w-3xl mx-auto text-center">
+        <p class="text-[11px] text-brand-muted/85 leading-relaxed">
+          <span class="text-brand-terracotta font-semibold">Aviso:</span>
+          as imagens dos produtos são editadas/geradas com auxílio de <strong class="text-brand-muted">inteligência artificial</strong> para fins ilustrativos.
+          Todos os itens e serviços oferecidos são <strong class="text-brand-muted">reais</strong> e fabricados pela Fonsati Decor.
+        </p>
+      </div>
+
+      <div class="mt-4 text-center text-xs text-brand-muted flex flex-col sm:flex-row justify-between items-center gap-3">
         <p>© 2026 Fonsati Decor. Todos os direitos reservados. Arapongas - PR.</p>
-        <p class="text-[11px]">Desenvolvido com excelência mobile-first.</p>
+        <p class="text-[11px]">
+          Desenvolvida por
+          <a href="https://wa.me/5543998042371" target="_blank" rel="noopener" class="text-brand-terracotta hover:text-white transition-colors font-semibold tracking-wider">
+            00brother
+          </a>
+        </p>
       </div>
     </div>
   </footer>
@@ -473,7 +506,7 @@
     </div>
   </div>
 
-  <a href="https://wa.me/5544999999999?text=Ol%C3%A1!%20Gostaria%20de%20um%20atendimento%20r%C3%A1pido." 
+  <a href="https://wa.me/5543998042371?text=Ol%C3%A1!%20Gostaria%20de%20um%20atendimento%20r%C3%A1pido." 
      target="_blank" rel="noopener"
      aria-label="Falar no WhatsApp"
      class="fixed right-4 bottom-5 z-40 w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-emerald-500 text-white flex items-center justify-center shadow-float hover:scale-105 active:scale-95 transition-transform group">
@@ -484,7 +517,7 @@
   </a>
 
   <script>
-    const WHATSAPP_NUMBER = "5544999999999";
+    const WHATSAPP_NUMBER = "5543998042371";
 
     (function() {
       const loadingScreen = document.getElementById('loadingScreen');
@@ -508,9 +541,6 @@
       setTimeout(hideLoadingScreen, 5000);
     })();
 
-    // ============================================
-    // 📸 IMAGENS DOS PRODUTOS — mesma pasta do HTML (SEM img/)
-    // ============================================
     const produtos = [
       { id: 1, nome: "Sofá Modena Retrátil & Reclinável", categoria: "sofas", tag: "Mais Vendido",
         descricao: "Sofá de alto padrão com assentos retráteis com mola ensacada, encosto reclinável com catraca silenciosa em 5 estágios. Revestimento em Linho Cru de alta resistência.",
