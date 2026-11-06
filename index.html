@@ -157,9 +157,15 @@
   <main>
     <section id="inicio" class="relative pt-28 pb-16 md:pt-36 md:pb-28 overflow-hidden bg-brand-sand">
 
-      <!-- FOTO DE FUNDO ÚNICA -->
+      <!-- FOTO DE FUNDO — MOBILE e DESKTOP trocam -->
       <div class="absolute inset-0 z-0 overflow-hidden" aria-hidden="true">
-        <div class="absolute inset-0 bg-cover bg-center"
+
+        <!-- 📱 MOBILE: Sala Aconchegante com Sofá Bege FRESNEURAL (1) -->
+        <div class="absolute inset-0 bg-cover bg-center block lg:hidden"
+             style="background-image: url('Sala%20Aconchegante%20com%20Sof%C3%A1%20Bege%20FRESNEURAL%20(1).png');"></div>
+
+        <!-- 🖥️ DESKTOP: Sala de estar moderna e aconchegante -->
+        <div class="absolute inset-0 bg-cover bg-center hidden lg:block"
              style="background-image: url('Sala de estar moderna e aconchegante.png');"></div>
 
         <div class="absolute inset-0 bg-brand-bg/80 lg:hidden"></div>
@@ -210,7 +216,6 @@
 
           </div>
 
-          <!-- Card SVG "Design & Conforto" — APENAS DESKTOP -->
           <div class="hidden lg:block lg:col-span-5 relative">
             <div class="relative rounded-3xl overflow-hidden bg-brand-surface border border-brand-border shadow-luxury p-3">
               <div class="relative aspect-[4/5] rounded-2xl overflow-hidden bg-gradient-to-br from-brand-sand to-brand-copperLight/30 flex items-center justify-center text-center p-8 group">
@@ -483,22 +488,10 @@
           <p id="modalDesc" class="text-sm text-brand-muted leading-relaxed">Descrição detalhada do produto.</p>
         </div>
         <div class="bg-brand-sand/50 p-4 rounded-xl border border-brand-border grid grid-cols-2 gap-4 text-xs">
-          <div>
-            <span class="text-brand-muted block">Estrutura:</span>
-            <strong id="modalEstrutura" class="text-brand-charcoal">Eucalipto Tratado</strong>
-          </div>
-          <div>
-            <span class="text-brand-muted block">Garantia:</span>
-            <strong class="text-brand-charcoal">1 Ano de Fábrica</strong>
-          </div>
-          <div>
-            <span class="text-brand-muted block">Tecidos:</span>
-            <strong class="text-brand-charcoal">Linho, Velvet ou Suede</strong>
-          </div>
-          <div>
-            <span class="text-brand-muted block">Medidas:</span>
-            <strong id="modalMedidas" class="text-brand-charcoal">Sob Consulta</strong>
-          </div>
+          <div><span class="text-brand-muted block">Estrutura:</span><strong id="modalEstrutura" class="text-brand-charcoal">Eucalipto Tratado</strong></div>
+          <div><span class="text-brand-muted block">Garantia:</span><strong class="text-brand-charcoal">1 Ano de Fábrica</strong></div>
+          <div><span class="text-brand-muted block">Tecidos:</span><strong class="text-brand-charcoal">Linho, Velvet ou Suede</strong></div>
+          <div><span class="text-brand-muted block">Medidas:</span><strong id="modalMedidas" class="text-brand-charcoal">Sob Consulta</strong></div>
         </div>
       </div>
       <div class="p-4 bg-brand-sand/30 border-t border-brand-border">
