@@ -515,83 +515,97 @@
   <script>
     const WHATSAPP_NUMBER = "5543998042371";
 
+    /* ==========================================================
+       1) LOADING SCREEN — executado PRIMEIRO, isolado em try/catch
+          para nunca travar a página por causa de erro posterior
+    ========================================================== */
     (function() {
       const loadingScreen = document.getElementById('loadingScreen');
       const minTime = 800;
       const startTime = Date.now();
 
       function hideLoadingScreen() {
+        if (!loadingScreen || loadingScreen.dataset.hidden) return;
+        loadingScreen.dataset.hidden = "1";
         const elapsed = Date.now() - startTime;
         const waitTime = Math.max(0, minTime - elapsed);
         setTimeout(() => {
-          if (loadingScreen) {
-            loadingScreen.classList.add('opacity-0', 'pointer-events-none');
-            document.body.classList.remove('loading-active');
-            setTimeout(() => { if (loadingScreen) loadingScreen.remove(); }, 700);
-          }
+          loadingScreen.classList.add('opacity-0', 'pointer-events-none');
+          document.body.classList.remove('loading-active');
+          setTimeout(() => { loadingScreen.remove(); }, 700);
         }, waitTime);
       }
 
       if (document.readyState === 'complete') { hideLoadingScreen(); }
       else { window.addEventListener('load', hideLoadingScreen); }
-      setTimeout(hideLoadingScreen, 5000);
+      // fallback de segurança: nunca fica preso na tela de carregamento
+      setTimeout(hideLoadingScreen, 3500);
     })();
 
+    /* ==========================================================
+       2) DADOS DOS PRODUTOS — array corrigido
+    ========================================================== */
     const produtos = [
       {
-    id: 1,
-    nome: "Poltrona Reclinável Estofada com Puff – Bege Premium",
-    categoria: "poltronas",
-    tag: "Destaque",
-    descricao: "Poltrona estofada na elegante cor bege, com encosto alto acolchoado, braços macios e assento confortável. Acompanha puff estofado para apoio dos pés, proporcionando mais conforto e relaxamento. Possui pés de madeira em tom natural e design moderno.",
-    medidas: "Medidas sob consulta",
-    imagem: "sofa-modena.jpg"
-    icon: `<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>` },
-},
-     {
-    id: 2,
-    nome: "Puff Decorativo Quadrado Azul-Marinho",
-    categoria: "puffs",
-    tag: "Destaque",
-    descricao: "Puff estofado de design minimalista, revestido em tecido azul-marinho. Possui formato quadrado, acabamento elegante e assento acolchoado, oferecendo conforto e versatilidade para complementar salas de estar, quartos e ambientes modernos.",
-    medidas: "Medidas sob consulta",
-    imagem: "puff-azul-marinho.jpg",
-    icon: `<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="4" y="7" width="16" height="13" rx="2" stroke-width="1.5"/><path stroke-width="1.5" d="M4 11h16"/></svg>`
-},
-    {
-    id: 3,
-    nome: "Poltrona Decorativa Dupla em Linho Bege – Bella",
-    categoria: "poltronas",
-    tag: "Design Moderno",
-    descricao: "Conjunto com duas poltronas decorativas de design contemporâneo, revestidas em tecido bege de toque suave. Possuem encosto reto e confortável, assento amplo e braços laterais que proporcionam excelente apoio. Os pés em madeira maciça com acabamento natural oferecem resistência e um visual sofisticado. Ideais para salas de estar, recepções, escritórios e ambientes comerciais, combinando conforto, elegância e versatilidade.",
-    medidas: "Medidas individuais sob consulta.",
-    imagem: "poltrona-bella.jpg",
-    icon: `<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>`
-},
-     {
-    id: 4,
-    nome: "Pufe Decorativo Redondo com Base em Madeira – Velvet",
-    categoria: "pufes",
-    tag: "Design Sofisticado",
-    descricao: "Pufe redondo com design contemporâneo e acabamento estofado em tecido bege de toque macio. Possui assento acolchoado com formato arredondado, proporcionando conforto e versatilidade no uso diário. Sua estrutura conta com base lateral em madeira com acabamento natural, que agrega charme, estabilidade e sofisticação à peça. Ideal para salas de estar, quartos, closets e ambientes decorativos, podendo ser utilizado como assento extra ou apoio para os pés.",
-    medidas: "Medidas sob consulta.",
-    imagem: "pufe-bau.jpg",
-    icon: `<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4"/></svg>`
-},
-     {
-    id: 5,
-    nome: "Cabeceira Estofada Imperial Queen – Cinza",
-    categoria: "cabeceiras",
-    tag: "Design Premium",
-    descricao: "Cabeceira estofada de alto padrão, com design elegante e acabamento capitonê em quadrados com botões decorativos. Revestida em tecido cinza de toque macio, proporciona sofisticação, conforto e aconchego ao ambiente. Possui estrutura robusta e visual moderno, ideal para transformar o quarto em um espaço mais acolhedor e refinado. Combina perfeitamente com camas de casal, Queen e projetos de decoração contemporâneos.",
-    medidas: "1,40m de largura x 1,19m de altura",
-    imagem: "cabeceira-imperial.jpg",
-    icon: `<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>`
-},
-      { id: 6, nome: "Reforma Completa de Estofados", categoria: "reforma", tag: "Serviço Premium",
+        id: 1,
+        nome: "Poltrona Reclinável Estofada com Puff – Bege Premium",
+        categoria: "poltronas",
+        tag: "Destaque",
+        descricao: "Poltrona estofada na elegante cor bege, com encosto alto acolchoado, braços macios e assento confortável. Acompanha puff estofado para apoio dos pés, proporcionando mais conforto e relaxamento. Possui pés de madeira em tom natural e design moderno.",
+        medidas: "Medidas sob consulta",
+        imagem: "sofa-modena.jpg",
+        icon: `<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>`
+      },
+      {
+        id: 2,
+        nome: "Puff Decorativo Quadrado Azul-Marinho",
+        categoria: "pufes",
+        tag: "Destaque",
+        descricao: "Puff estofado de design minimalista, revestido em tecido azul-marinho. Possui formato quadrado, acabamento elegante e assento acolchoado, oferecendo conforto e versatilidade para complementar salas de estar, quartos e ambientes modernos.",
+        medidas: "Medidas sob consulta",
+        imagem: "puff-azul-marinho.jpg",
+        icon: `<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="4" y="7" width="16" height="13" rx="2" stroke-width="1.5"/><path stroke-width="1.5" d="M4 11h16"/></svg>`
+      },
+      {
+        id: 3,
+        nome: "Poltrona Decorativa Dupla em Linho Bege – Bella",
+        categoria: "poltronas",
+        tag: "Design Moderno",
+        descricao: "Conjunto com duas poltronas decorativas de design contemporâneo, revestidas em tecido bege de toque suave. Possuem encosto reto e confortável, assento amplo e braços laterais que proporcionam excelente apoio. Os pés em madeira maciça com acabamento natural oferecem resistência e um visual sofisticado. Ideais para salas de estar, recepções, escritórios e ambientes comerciais, combinando conforto, elegância e versatilidade.",
+        medidas: "Medidas individuais sob consulta.",
+        imagem: "poltrona-bella.jpg",
+        icon: `<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>`
+      },
+      {
+        id: 4,
+        nome: "Pufe Decorativo Redondo com Base em Madeira – Velvet",
+        categoria: "pufes",
+        tag: "Design Sofisticado",
+        descricao: "Pufe redondo com design contemporâneo e acabamento estofado em tecido bege de toque macio. Possui assento acolchoado com formato arredondado, proporcionando conforto e versatilidade no uso diário. Sua estrutura conta com base lateral em madeira com acabamento natural, que agrega charme, estabilidade e sofisticação à peça. Ideal para salas de estar, quartos, closets e ambientes decorativos, podendo ser utilizado como assento extra ou apoio para os pés.",
+        medidas: "Medidas sob consulta.",
+        imagem: "pufe-bau.jpg",
+        icon: `<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4"/></svg>`
+      },
+      {
+        id: 5,
+        nome: "Cabeceira Estofada Imperial Queen – Cinza",
+        categoria: "cabeceiras",
+        tag: "Design Premium",
+        descricao: "Cabeceira estofada de alto padrão, com design elegante e acabamento capitonê em quadrados com botões decorativos. Revestida em tecido cinza de toque macio, proporciona sofisticação, conforto e aconchego ao ambiente. Possui estrutura robusta e visual moderno, ideal para transformar o quarto em um espaço mais acolhedor e refinado. Combina perfeitamente com camas de casal, Queen e projetos de decoração contemporâneos.",
+        medidas: "1,40m de largura x 1,19m de altura",
+        imagem: "cabeceira-imperial.jpg",
+        icon: `<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>`
+      },
+      {
+        id: 6,
+        nome: "Reforma Completa de Estofados",
+        categoria: "reforma",
+        tag: "Serviço Premium",
         descricao: "Troca completa do revestimento, recalibração de percintas, reposição de espuma com densidade certificada e revisão da estrutura de madeira.",
-        medidas: "Qualquer modelo existente", imagem: "reforma.jpg",
-        icon: `<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>` }
+        medidas: "Qualquer modelo existente",
+        imagem: "reforma.jpg",
+        icon: `<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>`
+      }
     ];
 
     const categoriaLabel = {
@@ -599,6 +613,9 @@
       cabeceiras: 'Cabeceiras', reforma: 'Reforma'
     };
 
+    /* ==========================================================
+       3) HEADER / MENU MOBILE
+    ========================================================== */
     const header = document.getElementById('mainHeader');
     window.addEventListener('scroll', () => {
       if (window.scrollY > 20) {
@@ -640,6 +657,9 @@
       });
     });
 
+    /* ==========================================================
+       4) RENDERIZAÇÃO DO CATÁLOGO
+    ========================================================== */
     const productGrid = document.getElementById('productGrid');
 
     function renderProducts(filter = 'todos') {
@@ -689,6 +709,9 @@
       });
     });
 
+    /* ==========================================================
+       5) MODAL DE PRODUTO
+    ========================================================== */
     const overlay = document.getElementById('productModalOverlay');
     const sheet = document.getElementById('productModalSheet');
     const closeModalBtn = document.getElementById('closeModalBtn');
@@ -729,6 +752,9 @@
     overlay.addEventListener('click', (e) => { if (e.target === overlay) closeProductModal(); });
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeProductModal(); });
 
+    /* ==========================================================
+       6) INICIALIZAÇÃO
+    ========================================================== */
     renderProducts('todos');
   </script>
 </body>
