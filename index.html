@@ -6,12 +6,10 @@
   <title>Fonsati Decor — Arapongas PR | Fabricação & Reforma Sob Medida</title>
   <meta name="description" content="Fabricação sob medida, venda e reforma premium de sofás, poltronas, pufes e cabeceiras na Fonsati Decor em Arapongas - PR. Qualidade artesanal e entrega agendada.">
 
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -19,17 +17,10 @@
         extend: {
           colors: {
             brand: {
-              bg: '#FDFBF7',
-              surface: '#FFFFFF',
-              sand: '#F5F0E8',
-              border: '#EAE3D9',
-              charcoal: '#1A1816',
-              charcoalSoft: '#2B2724',
-              muted: '#7A7267',
-              terracotta: '#C58C57',
-              terracottaDark: '#A46F3D',
-              copperLight: '#E8D4C1',
-              accent: '#8C5E35'
+              bg: '#FDFBF7', surface: '#FFFFFF', sand: '#F5F0E8', border: '#EAE3D9',
+              charcoal: '#1A1816', charcoalSoft: '#2B2724', muted: '#7A7267',
+              terracotta: '#C58C57', terracottaDark: '#A46F3D',
+              copperLight: '#E8D4C1', accent: '#8C5E35'
             }
           },
           fontFamily: {
@@ -47,148 +38,69 @@
   </script>
 
   <style>
-    /* Custom Scrollbar */
-    ::-webkit-scrollbar {
-      width: 6px;
-      height: 6px;
-    }
-    ::-webkit-scrollbar-track {
-      background: #F5F0E8;
-    }
-    ::-webkit-scrollbar-thumb {
-      background: #C58C57;
-      border-radius: 99px;
-    }
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: #F5F0E8; }
+    ::-webkit-scrollbar-thumb { background: #C58C57; border-radius: 99px; }
 
-    /* Animation Classes */
-    .pulse-ring {
-      animation: ringPulse 2.2s infinite ease-out;
-    }
+    .pulse-ring { animation: ringPulse 2.2s infinite ease-out; }
     @keyframes ringPulse {
       0% { transform: scale(1); opacity: 0.6; }
       80%, 100% { transform: scale(1.6); opacity: 0; }
     }
 
-    .bottom-sheet {
-      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .bottom-sheet.closed {
-      transform: translateY(100%);
-    }
+    .bottom-sheet { transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1); }
+    .bottom-sheet.closed { transform: translateY(100%); }
 
-    /* Hide scrollbar for clean filter tabs on mobile */
-    .no-scrollbar::-webkit-scrollbar {
-      display: none;
-    }
-    .no-scrollbar {
-      -ms-overflow-style: none;
-      scrollbar-width: none;
-    }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
-    /* Ícones SVG dos cards do catálogo — fallback se a foto falhar */
-    #productGrid .product-icon svg {
-      width: 3rem;
-      height: 3rem;
-    }
+    #productGrid .product-icon svg { width: 3rem; height: 3rem; }
     @media (min-width: 640px) {
-      #productGrid .product-icon svg {
-        width: 4rem;
-        height: 4rem;
-      }
+      #productGrid .product-icon svg { width: 4rem; height: 4rem; }
     }
 
-    /* ============================================
-       LOADING SCREEN — Tela de carregamento
-    ============================================ */
-    #loadingScreen {
-      transition: opacity 0.7s ease-out;
-    }
-
-    .loading-logo {
-      animation: logoPulse 1.6s ease-in-out infinite;
-    }
+    #loadingScreen { transition: opacity 0.7s ease-out; }
+    .loading-logo { animation: logoPulse 1.6s ease-in-out infinite; }
     @keyframes logoPulse {
-      0%, 100% {
-        transform: scale(1);
-        box-shadow: 0 0 0 0 rgba(197, 140, 87, 0.4);
-      }
-      50% {
-        transform: scale(1.08);
-        box-shadow: 0 0 0 18px rgba(197, 140, 87, 0);
-      }
+      0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(197, 140, 87, 0.4); }
+      50% { transform: scale(1.08); box-shadow: 0 0 0 18px rgba(197, 140, 87, 0); }
     }
-
-    .loading-bar {
-      animation: loadProgress 1.4s ease-in-out infinite;
-    }
+    .loading-bar { animation: loadProgress 1.4s ease-in-out infinite; }
     @keyframes loadProgress {
-      0%   { transform: translateX(-100%); }
+      0% { transform: translateX(-100%); }
       100% { transform: translateX(100%); }
     }
-
-    .loading-text {
-      animation: fadeInOut 2s ease-in-out infinite;
-    }
+    .loading-text { animation: fadeInOut 2s ease-in-out infinite; }
     @keyframes fadeInOut {
       0%, 100% { opacity: 0.5; }
-      50%      { opacity: 1; }
+      50% { opacity: 1; }
     }
-
-    /* Impede scroll durante o carregamento */
-    body.loading-active {
-      overflow: hidden;
-    }
-
-    /* Safe area para iPhone com notch */
-    .safe-bottom {
-      padding-bottom: calc(1.25rem + env(safe-area-inset-bottom, 0px));
-    }
+    body.loading-active { overflow: hidden; }
   </style>
 </head>
 
 <body class="bg-brand-bg text-brand-charcoal font-sans antialiased selection:bg-brand-terracotta selection:text-white pb-16 md:pb-0 loading-active">
 
-  <!-- ==========================================
-       LOADING SCREEN — Tela de carregamento
-  ========================================== -->
   <div id="loadingScreen" class="fixed inset-0 z-[100] bg-brand-bg flex items-center justify-center">
     <div class="flex flex-col items-center px-6 text-center">
-
-      <!-- Logo redonda com pulse -->
       <div class="loading-logo relative w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden border-4 border-brand-terracotta/30 shadow-luxury bg-brand-charcoal flex items-center justify-center">
         <span class="font-serif text-5xl sm:text-6xl font-bold text-brand-terracotta">F</span>
         <img src="logo.png" alt="Fonsati Decor" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none';">
       </div>
-
-      <!-- Nome da marca -->
       <span class="mt-6 font-serif text-2xl sm:text-3xl font-semibold text-brand-charcoal tracking-wide">
         Fonsati <span class="text-brand-terracotta">Decor</span>
       </span>
-      <span class="text-[10px] uppercase tracking-[0.3em] text-brand-muted font-medium mt-1">
-        Estofados · Arapongas
-      </span>
-
-      <!-- Barra de progresso -->
+      <span class="text-[10px] uppercase tracking-[0.3em] text-brand-muted font-medium mt-1">Estofados · Arapongas</span>
       <div class="mt-7 w-32 sm:w-40 h-1 bg-brand-sand rounded-full overflow-hidden">
         <div class="loading-bar h-full w-full bg-gradient-to-r from-brand-copperLight via-brand-terracotta to-brand-terracottaDark rounded-full"></div>
       </div>
-
-      <!-- Texto animado -->
-      <span class="loading-text mt-4 text-[10px] uppercase tracking-[0.25em] text-brand-muted font-medium">
-        Carregando...
-      </span>
-
+      <span class="loading-text mt-4 text-[10px] uppercase tracking-[0.25em] text-brand-muted font-medium">Carregando...</span>
     </div>
   </div>
 
-  <!-- ==========================================
-       HEADER & NAVIGATION BAR
-  ========================================== -->
   <header id="mainHeader" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 border-b border-transparent">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
-        
-        <!-- Logo -->
         <a href="#" class="flex items-center gap-3 group">
           <div class="relative w-12 h-12 rounded-full overflow-hidden shadow-md border-2 border-brand-terracotta/20 transition-transform group-hover:scale-105 bg-brand-charcoal flex items-center justify-center flex-shrink-0">
             <span class="font-serif text-2xl font-bold text-brand-terracotta">F</span>
@@ -202,7 +114,6 @@
           </div>
         </a>
 
-        <!-- Desktop Navigation -->
         <nav class="hidden md:flex items-center gap-8 font-medium text-sm text-brand-charcoalSoft">
           <a href="#inicio" class="hover:text-brand-terracotta transition-colors">Início</a>
           <a href="#sobre" class="hover:text-brand-terracotta transition-colors">Sobre Nós</a>
@@ -210,7 +121,6 @@
           <a href="#catalogo" class="hover:text-brand-terracotta transition-colors">Catálogo</a>
         </nav>
 
-        <!-- Header Actions -->
         <div class="flex items-center gap-3">
           <a href="https://wa.me/5544999999999?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida." 
              target="_blank" rel="noopener" 
@@ -219,7 +129,6 @@
              WhatsApp
           </a>
 
-          <!-- Mobile Menu Button -->
           <button id="mobileMenuBtn" aria-label="Abrir Menu" class="md:hidden flex items-center justify-center w-12 h-12 rounded-full text-brand-charcoal bg-brand-sand/80 hover:bg-brand-sand transition-colors">
             <svg id="hamburgerIcon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
             <svg id="closeIcon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
@@ -228,22 +137,12 @@
       </div>
     </div>
 
-    <!-- Mobile Drawer Menu -->
     <div id="mobileDrawer" class="hidden md:hidden bg-brand-surface/95 backdrop-blur-xl border-b border-brand-border px-6 py-6 transition-all duration-300">
       <nav class="flex flex-col gap-4 font-medium text-base">
-        <a href="#inicio" class="mobile-nav-link py-3 border-b border-brand-sand flex justify-between items-center text-brand-charcoal font-serif text-lg">
-          Início <span class="text-xs text-brand-terracotta">01</span>
-        </a>
-        <a href="#sobre" class="mobile-nav-link py-3 border-b border-brand-sand flex justify-between items-center text-brand-charcoal font-serif text-lg">
-          Sobre Nós <span class="text-xs text-brand-terracotta">02</span>
-        </a>
-        <a href="#servicos" class="mobile-nav-link py-3 border-b border-brand-sand flex justify-between items-center text-brand-charcoal font-serif text-lg">
-          Nossos Serviços <span class="text-xs text-brand-terracotta">03</span>
-        </a>
-        <a href="#catalogo" class="mobile-nav-link py-3 flex justify-between items-center text-brand-charcoal font-serif text-lg">
-          Catálogo & Modelos <span class="text-xs text-brand-terracotta">04</span>
-        </a>
-        
+        <a href="#inicio" class="mobile-nav-link py-3 border-b border-brand-sand flex justify-between items-center text-brand-charcoal font-serif text-lg">Início <span class="text-xs text-brand-terracotta">01</span></a>
+        <a href="#sobre" class="mobile-nav-link py-3 border-b border-brand-sand flex justify-between items-center text-brand-charcoal font-serif text-lg">Sobre Nós <span class="text-xs text-brand-terracotta">02</span></a>
+        <a href="#servicos" class="mobile-nav-link py-3 border-b border-brand-sand flex justify-between items-center text-brand-charcoal font-serif text-lg">Nossos Serviços <span class="text-xs text-brand-terracotta">03</span></a>
+        <a href="#catalogo" class="mobile-nav-link py-3 flex justify-between items-center text-brand-charcoal font-serif text-lg">Catálogo & Modelos <span class="text-xs text-brand-terracotta">04</span></a>
         <div class="pt-4 mt-2">
           <a href="https://wa.me/5544999999999?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20atendimento." 
              target="_blank" rel="noopener" 
@@ -256,9 +155,6 @@
   </header>
 
   <main>
-    <!-- ==========================================
-         HERO SECTION
-    ========================================== -->
     <section id="inicio" class="relative pt-28 pb-16 md:pt-36 md:pb-28 overflow-hidden bg-brand-sand">
 
       <!-- FOTO DE FUNDO ÚNICA -->
@@ -266,20 +162,15 @@
         <div class="absolute inset-0 bg-cover bg-center"
              style="background-image: url('Sala de estar moderna e aconchegante.png');"></div>
 
-        <!-- Overlay mobile -->
         <div class="absolute inset-0 bg-brand-bg/80 lg:hidden"></div>
-        <!-- Overlay desktop -->
         <div class="absolute inset-0 hidden lg:block bg-gradient-to-r from-brand-bg/90 via-brand-bg/80 to-brand-bg/40"></div>
       </div>
 
-      <!-- CONTEÚDO DO HERO -->
       <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           
-          <!-- Text Content -->
           <div class="lg:col-span-7 flex flex-col items-start text-left">
             
-            <!-- Badges Bar -->
             <div class="inline-flex flex-wrap items-center gap-2 mb-6">
               <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-widest bg-brand-terracotta/15 text-brand-terracotta border border-brand-terracotta/20">
                 Arapongas · PR
@@ -289,7 +180,6 @@
               </span>
             </div>
 
-            <!-- Headline -->
             <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-semibold leading-[1.08] text-brand-charcoal tracking-tight mb-6">
               Estofados com <em class="not-italic text-brand-terracotta font-serif">alma artesanal</em> & elegância sob medida.
             </h1>
@@ -298,7 +188,6 @@
               Transformamos a sua sala em um refúgio de conforto absoluto. Fabricação exclusiva, reforma de alto padrão e venda de peças autorais com acabamento impecável em Arapongas e toda a região.
             </p>
 
-            <!-- Action Buttons -->
             <div class="w-full sm:w-auto flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
               <a href="#catalogo" class="min-h-[52px] inline-flex items-center justify-center px-8 py-3.5 text-sm font-semibold uppercase tracking-wider text-white bg-brand-charcoal hover:bg-brand-charcoalSoft rounded-full shadow-luxury transition-all duration-200">
                 Ver Catálogo de Peças
@@ -308,7 +197,6 @@
               </a>
             </div>
 
-            <!-- Trust Pills -->
             <div class="mt-10 pt-8 border-t border-brand-border/60 w-full grid grid-cols-2 gap-4 text-center sm:text-left">
               <div>
                 <span class="block font-serif text-2xl sm:text-3xl font-bold text-brand-charcoal">+12 Anos</span>
@@ -322,11 +210,9 @@
 
           </div>
 
-          <!-- Visual Showcase Card -->
-          <div class="lg:col-span-5 relative">
-
-            <!-- 🖥️ DESKTOP: card SVG "Design & Conforto" -->
-            <div class="hidden lg:block relative rounded-3xl overflow-hidden bg-brand-surface border border-brand-border shadow-luxury p-3">
+          <!-- Card SVG "Design & Conforto" — APENAS DESKTOP -->
+          <div class="hidden lg:block lg:col-span-5 relative">
+            <div class="relative rounded-3xl overflow-hidden bg-brand-surface border border-brand-border shadow-luxury p-3">
               <div class="relative aspect-[4/5] rounded-2xl overflow-hidden bg-gradient-to-br from-brand-sand to-brand-copperLight/30 flex items-center justify-center text-center p-8 group">
                 
                 <div class="space-y-4 flex flex-col items-center">
@@ -350,49 +236,12 @@
                 </div>
               </div>
             </div>
-
-            <!-- 📱 MOBILE: imagem retrato 3:4 (aparece só no celular, abaixo do texto) -->
-            <div class="block lg:hidden relative w-full max-w-md mx-auto mt-4">
-              <div class="relative aspect-[3/4] rounded-2xl overflow-hidden bg-gradient-to-br from-brand-sand to-brand-copperLight/30 border border-brand-border shadow-luxury">
-
-                <!-- FALLBACK SVG (fica visível caso a foto não exista) -->
-                <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-6 z-0">
-                  <div class="w-20 h-20 rounded-full bg-brand-terracotta/10 text-brand-terracotta flex items-center justify-center mb-3">
-                    <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
-                  </div>
-                  <span class="font-serif text-xl font-bold text-brand-charcoal">Design & Conforto</span>
-                  <span class="text-[10px] text-brand-muted uppercase tracking-widest mt-1">Padrão Arapongas PR</span>
-                </div>
-
-                <!-- 👉 FOTO RETRATO 3:4 (se existir, cobre o fallback) -->
-                <img src="Sala%20Aconchegante%20com%20Sof%C3%A1%20Bege%20FRESNEURAL%20(1).png" 
-                     alt="Sala de estar aconchegante com estofados Fonsati Decor" 
-                     class="absolute inset-0 w-full h-full object-cover z-10"
-                     loading="eager"
-                     onerror="this.style.display='none';">
-
-                <!-- Badge flutuante (sempre em cima) -->
-                <div class="absolute bottom-3 left-3 right-3 z-20 bg-brand-surface/95 backdrop-blur-md p-3 rounded-xl border border-brand-border text-left shadow-md flex items-center gap-2.5">
-                  <div class="w-9 h-9 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center flex-shrink-0">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                  </div>
-                  <div>
-                    <p class="text-[11px] font-bold text-brand-charcoal">Atendimento Domiciliar</p>
-                    <p class="text-[10px] text-brand-muted">Levamos o catálogo até você</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
           </div>
 
         </div>
       </div>
     </section>
 
-    <!-- ==========================================
-         SOBRE NÓS (ABOUT)
-    ========================================== -->
     <section id="sobre" class="py-20 bg-brand-surface border-y border-brand-border">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -431,7 +280,6 @@
             <p class="text-brand-muted leading-relaxed mb-8">
               Trabalhamos diretamente com arquitetos, designers de interiores e proprietários que buscam um produto diferenciado, durável e com acabamento de alto padrão.
             </p>
-
             <div class="flex flex-wrap gap-4 w-full sm:w-auto">
               <a href="https://wa.me/5544999999999?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20projeto%20sob%20medida." target="_blank" rel="noopener" class="min-h-[48px] w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 text-xs font-semibold uppercase tracking-wider text-white bg-brand-terracotta hover:bg-brand-terracottaDark rounded-full transition-all">
                 Fazer Projeto Sob Medida
@@ -443,9 +291,6 @@
       </div>
     </section>
 
-    <!-- ==========================================
-         SERVIÇOS EM DESTAQUE
-    ========================================== -->
     <section id="servicos" class="py-20 bg-brand-bg">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
@@ -457,7 +302,6 @@
 
         <div class="grid grid-cols-2 md:grid-cols-3 gap-2.5 sm:gap-5 lg:gap-8">
 
-          <!-- Card 1 -->
           <div class="bg-brand-surface rounded-xl sm:rounded-2xl p-3 sm:p-6 lg:p-8 border border-brand-border hover:border-brand-terracotta/50 shadow-sm hover:shadow-luxury transition-all duration-300 flex flex-col justify-between group">
             <div>
               <div class="w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 rounded-lg sm:rounded-xl bg-brand-sand text-brand-terracotta flex items-center justify-center mb-2.5 sm:mb-4 lg:mb-6 group-hover:scale-110 transition-transform">
@@ -473,7 +317,6 @@
             </a>
           </div>
 
-          <!-- Card 2 -->
           <div class="bg-brand-surface rounded-xl sm:rounded-2xl p-3 sm:p-6 lg:p-8 border border-brand-border hover:border-brand-terracotta/50 shadow-sm hover:shadow-luxury transition-all duration-300 flex flex-col justify-between group">
             <div>
               <div class="w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 rounded-lg sm:rounded-xl bg-brand-sand text-brand-terracotta flex items-center justify-center mb-2.5 sm:mb-4 lg:mb-6 group-hover:scale-110 transition-transform">
@@ -489,7 +332,6 @@
             </a>
           </div>
 
-          <!-- Card 3 -->
           <div class="col-span-2 md:col-span-1 bg-brand-surface rounded-xl sm:rounded-2xl p-3 sm:p-6 lg:p-8 border border-brand-border hover:border-brand-terracotta/50 shadow-sm hover:shadow-luxury transition-all duration-300 flex flex-col justify-between group">
             <div>
               <div class="w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 rounded-lg sm:rounded-xl bg-brand-sand text-brand-terracotta flex items-center justify-center mb-2.5 sm:mb-4 lg:mb-6 group-hover:scale-110 transition-transform">
@@ -509,9 +351,6 @@
       </div>
     </section>
 
-    <!-- ==========================================
-         CATÁLOGO INTERATIVO COM FILTROS
-    ========================================== -->
     <section id="catalogo" class="py-20 bg-brand-surface border-t border-brand-border">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
@@ -525,103 +364,67 @@
           </p>
         </div>
 
-        <!-- Filter Buttons Bar -->
         <div class="flex items-center gap-1.5 sm:gap-2 overflow-x-auto no-scrollbar pb-3 sm:pb-4 mb-4 sm:mb-8 -mx-4 px-4 sm:mx-0 sm:px-0" id="filterContainer">
-          <button data-filter="todos" class="filter-btn active min-h-[36px] sm:min-h-[44px] px-3 sm:px-5 py-1.5 sm:py-2.5 rounded-full text-[10px] sm:text-xs font-semibold tracking-wider uppercase whitespace-nowrap transition-all duration-200 bg-brand-charcoal text-white">
-            Todos
-          </button>
-          <button data-filter="sofas" class="filter-btn min-h-[36px] sm:min-h-[44px] px-3 sm:px-5 py-1.5 sm:py-2.5 rounded-full text-[10px] sm:text-xs font-semibold tracking-wider uppercase whitespace-nowrap transition-all duration-200 bg-brand-sand text-brand-charcoalSoft hover:bg-brand-border">
-            Sofás
-          </button>
-          <button data-filter="poltronas" class="filter-btn min-h-[36px] sm:min-h-[44px] px-3 sm:px-5 py-1.5 sm:py-2.5 rounded-full text-[10px] sm:text-xs font-semibold tracking-wider uppercase whitespace-nowrap transition-all duration-200 bg-brand-sand text-brand-charcoalSoft hover:bg-brand-border">
-            Poltronas
-          </button>
-          <button data-filter="pufes" class="filter-btn min-h-[36px] sm:min-h-[44px] px-3 sm:px-5 py-1.5 sm:py-2.5 rounded-full text-[10px] sm:text-xs font-semibold tracking-wider uppercase whitespace-nowrap transition-all duration-200 bg-brand-sand text-brand-charcoalSoft hover:bg-brand-border">
-            Pufes
-          </button>
-          <button data-filter="cabeceiras" class="filter-btn min-h-[36px] sm:min-h-[44px] px-3 sm:px-5 py-1.5 sm:py-2.5 rounded-full text-[10px] sm:text-xs font-semibold tracking-wider uppercase whitespace-nowrap transition-all duration-200 bg-brand-sand text-brand-charcoalSoft hover:bg-brand-border">
-            Cabeceiras
-          </button>
-          <button data-filter="reforma" class="filter-btn min-h-[36px] sm:min-h-[44px] px-3 sm:px-5 py-1.5 sm:py-2.5 rounded-full text-[10px] sm:text-xs font-semibold tracking-wider uppercase whitespace-nowrap transition-all duration-200 bg-brand-sand text-brand-charcoalSoft hover:bg-brand-border">
-            Reforma
-          </button>
+          <button data-filter="todos" class="filter-btn active min-h-[36px] sm:min-h-[44px] px-3 sm:px-5 py-1.5 sm:py-2.5 rounded-full text-[10px] sm:text-xs font-semibold tracking-wider uppercase whitespace-nowrap transition-all duration-200 bg-brand-charcoal text-white">Todos</button>
+          <button data-filter="sofas" class="filter-btn min-h-[36px] sm:min-h-[44px] px-3 sm:px-5 py-1.5 sm:py-2.5 rounded-full text-[10px] sm:text-xs font-semibold tracking-wider uppercase whitespace-nowrap transition-all duration-200 bg-brand-sand text-brand-charcoalSoft hover:bg-brand-border">Sofás</button>
+          <button data-filter="poltronas" class="filter-btn min-h-[36px] sm:min-h-[44px] px-3 sm:px-5 py-1.5 sm:py-2.5 rounded-full text-[10px] sm:text-xs font-semibold tracking-wider uppercase whitespace-nowrap transition-all duration-200 bg-brand-sand text-brand-charcoalSoft hover:bg-brand-border">Poltronas</button>
+          <button data-filter="pufes" class="filter-btn min-h-[36px] sm:min-h-[44px] px-3 sm:px-5 py-1.5 sm:py-2.5 rounded-full text-[10px] sm:text-xs font-semibold tracking-wider uppercase whitespace-nowrap transition-all duration-200 bg-brand-sand text-brand-charcoalSoft hover:bg-brand-border">Pufes</button>
+          <button data-filter="cabeceiras" class="filter-btn min-h-[36px] sm:min-h-[44px] px-3 sm:px-5 py-1.5 sm:py-2.5 rounded-full text-[10px] sm:text-xs font-semibold tracking-wider uppercase whitespace-nowrap transition-all duration-200 bg-brand-sand text-brand-charcoalSoft hover:bg-brand-border">Cabeceiras</button>
+          <button data-filter="reforma" class="filter-btn min-h-[36px] sm:min-h-[44px] px-3 sm:px-5 py-1.5 sm:py-2.5 rounded-full text-[10px] sm:text-xs font-semibold tracking-wider uppercase whitespace-nowrap transition-all duration-200 bg-brand-sand text-brand-charcoalSoft hover:bg-brand-border">Reforma</button>
         </div>
 
-        <!-- Product Grid -->
-        <div id="productGrid" class="grid grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-4 lg:gap-8">
-          <!-- Dynamically Injected via JS -->
-        </div>
+        <div id="productGrid" class="grid grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-4 lg:gap-8"></div>
 
       </div>
     </section>
 
-    <!-- ==========================================
-         INFORMAÇÕES DE CONTATO & HORÁRIO
-    ========================================== -->
     <section class="py-16 bg-brand-surface border-t border-brand-border">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid md:grid-cols-4 gap-8">
-          
           <div class="flex items-start gap-4">
             <div class="w-12 h-12 rounded-xl bg-brand-sand text-brand-terracotta flex items-center justify-center flex-shrink-0">
               <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
             </div>
             <div>
               <h4 class="font-serif font-semibold text-lg text-brand-charcoal">Endereço Fábrica</h4>
-              <p class="text-xs text-brand-muted mt-1 leading-relaxed">
-                Polo Moveleiro — Arapongas, PR<br>Atendimento com agendamento prévio.
-              </p>
+              <p class="text-xs text-brand-muted mt-1 leading-relaxed">Polo Moveleiro — Arapongas, PR<br>Atendimento com agendamento prévio.</p>
             </div>
           </div>
-
           <div class="flex items-start gap-4">
             <div class="w-12 h-12 rounded-xl bg-brand-sand text-brand-terracotta flex items-center justify-center flex-shrink-0">
               <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
             </div>
             <div>
               <h4 class="font-serif font-semibold text-lg text-brand-charcoal">Telefone / WhatsApp</h4>
-              <p class="text-xs text-brand-muted mt-1 leading-relaxed">
-                (44) 99999-9999<br>Atendimento rápido via mensagem.
-              </p>
+              <p class="text-xs text-brand-muted mt-1 leading-relaxed">(44) 99999-9999<br>Atendimento rápido via mensagem.</p>
             </div>
           </div>
-
           <div class="flex items-start gap-4">
             <div class="w-12 h-12 rounded-xl bg-brand-sand text-brand-terracotta flex items-center justify-center flex-shrink-0">
               <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
             </div>
             <div>
               <h4 class="font-serif font-semibold text-lg text-brand-charcoal">Horário de Funcionamento</h4>
-              <p class="text-xs text-brand-muted mt-1 leading-relaxed">
-                Segunda a Sexta: 08h às 18h<br>Sábados: 08h às 12h
-              </p>
+              <p class="text-xs text-brand-muted mt-1 leading-relaxed">Segunda a Sexta: 08h às 18h<br>Sábados: 08h às 12h</p>
             </div>
           </div>
-
           <div class="flex items-start gap-4">
             <div class="w-12 h-12 rounded-xl bg-brand-sand text-brand-terracotta flex items-center justify-center flex-shrink-0">
               <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 13l4 4L19 7"/></svg>
             </div>
             <div>
               <h4 class="font-serif font-semibold text-lg text-brand-charcoal">Região de Atendimento</h4>
-              <p class="text-xs text-brand-muted mt-1 leading-relaxed">
-                Arapongas, Apucarana, Rolândia, Londrina e Maringá.
-              </p>
+              <p class="text-xs text-brand-muted mt-1 leading-relaxed">Arapongas, Apucarana, Rolândia, Londrina e Maringá.</p>
             </div>
           </div>
-
         </div>
       </div>
     </section>
   </main>
 
-  <!-- ==========================================
-       FOOTER
-  ========================================== -->
   <footer class="bg-brand-charcoal text-white pt-16 pb-12 border-t border-brand-charcoalSoft">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-white/10">
-        
         <div class="md:col-span-2">
           <div class="flex items-center gap-3 mb-4">
             <div class="relative w-10 h-10 rounded-full overflow-hidden border border-brand-terracotta/30 bg-brand-charcoal flex items-center justify-center flex-shrink-0">
@@ -642,7 +445,6 @@
             </a>
           </div>
         </div>
-
         <div>
           <h5 class="text-xs font-bold uppercase tracking-widest text-brand-terracotta mb-4">Navegação</h5>
           <ul class="space-y-2.5 text-xs text-brand-muted">
@@ -652,19 +454,12 @@
             <li><a href="#catalogo" class="hover:text-white transition-colors">Catálogo de Produtos</a></li>
           </ul>
         </div>
-
         <div>
           <h5 class="text-xs font-bold uppercase tracking-widest text-brand-terracotta mb-4">Arapongas — PR</h5>
-          <p class="text-xs text-brand-muted leading-relaxed mb-3">
-            Atendemos residências e estabelecimentos comerciais em todo o Paraná.
-          </p>
-          <span class="inline-block text-[11px] text-emerald-400 bg-emerald-950/60 border border-emerald-800/50 px-2.5 py-1 rounded-full">
-            ● WhatsApp Ativo Hoje
-          </span>
+          <p class="text-xs text-brand-muted leading-relaxed mb-3">Atendemos residências e estabelecimentos comerciais em todo o Paraná.</p>
+          <span class="inline-block text-[11px] text-emerald-400 bg-emerald-950/60 border border-emerald-800/50 px-2.5 py-1 rounded-full">● WhatsApp Ativo Hoje</span>
         </div>
-
       </div>
-
       <div class="mt-8 text-center text-xs text-brand-muted flex flex-col sm:flex-row justify-between items-center gap-4">
         <p>© 2026 Fonsati Decor. Todos os direitos reservados. Arapongas - PR.</p>
         <p class="text-[11px]">Desenvolvido com excelência mobile-first.</p>
@@ -672,40 +467,21 @@
     </div>
   </footer>
 
-  <!-- ==========================================
-       PRODUCT DETAILS BOTTOM SHEET / MODAL
-  ========================================== -->
   <div id="productModalOverlay" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300 flex items-end sm:items-center justify-center p-0 sm:p-4">
-    
     <div id="productModalSheet" class="bottom-sheet closed w-full sm:max-w-2xl bg-brand-surface rounded-t-3xl sm:rounded-3xl shadow-sheet overflow-hidden flex flex-col max-h-[90vh]">
-      
-      <!-- Handlebar -->
       <div class="w-full flex justify-center pt-3 pb-1 sm:hidden">
         <div class="w-12 h-1.5 bg-brand-border rounded-full"></div>
       </div>
-
-      <!-- Sheet Header -->
       <div class="flex items-center justify-between px-6 py-4 border-b border-brand-border">
         <span id="modalCategory" class="text-xs font-bold uppercase tracking-widest text-brand-terracotta">Categorias</span>
-        <button id="closeModalBtn" aria-label="Fechar" class="w-9 h-9 rounded-full bg-brand-sand flex items-center justify-center text-brand-charcoal hover:bg-brand-border transition-colors">
-          ✕
-        </button>
+        <button id="closeModalBtn" aria-label="Fechar" class="w-9 h-9 rounded-full bg-brand-sand flex items-center justify-center text-brand-charcoal hover:bg-brand-border transition-colors">✕</button>
       </div>
-
-      <!-- Sheet Body -->
       <div class="p-6 overflow-y-auto space-y-6">
-        
-        <!-- Imagem 4:3 com fallback SVG -->
-        <div id="modalVisual" class="w-full aspect-[4/3] rounded-2xl bg-gradient-to-br from-brand-sand to-brand-copperLight/40 flex items-center justify-center relative text-brand-terracotta overflow-hidden">
-          <!-- Injected via JS -->
-        </div>
-
+        <div id="modalVisual" class="w-full aspect-[4/3] rounded-2xl bg-gradient-to-br from-brand-sand to-brand-copperLight/40 flex items-center justify-center relative text-brand-terracotta overflow-hidden"></div>
         <div>
           <h3 id="modalTitle" class="font-serif text-3xl font-semibold text-brand-charcoal mb-2">Nome do Produto</h3>
           <p id="modalDesc" class="text-sm text-brand-muted leading-relaxed">Descrição detalhada do produto.</p>
         </div>
-
-        <!-- Specifications Grid -->
         <div class="bg-brand-sand/50 p-4 rounded-xl border border-brand-border grid grid-cols-2 gap-4 text-xs">
           <div>
             <span class="text-brand-muted block">Estrutura:</span>
@@ -724,10 +500,7 @@
             <strong id="modalMedidas" class="text-brand-charcoal">Sob Consulta</strong>
           </div>
         </div>
-
       </div>
-
-      <!-- Sheet Footer Action -->
       <div class="p-4 bg-brand-sand/30 border-t border-brand-border">
         <a id="modalWhatsappBtn" href="#" target="_blank" rel="noopener"
            class="w-full min-h-[52px] flex items-center justify-center px-6 text-sm font-semibold uppercase tracking-wider text-white bg-emerald-600 hover:bg-emerald-700 rounded-xl shadow-md transition-all">
@@ -735,35 +508,22 @@
           Pedir Orçamento no WhatsApp
         </a>
       </div>
-
     </div>
   </div>
 
-  <!-- ==========================================
-       BOTÃO FLUTUANTE DO WHATSAPP
-  ========================================== -->
   <a href="https://wa.me/5544999999999?text=Ol%C3%A1!%20Gostaria%20de%20um%20atendimento%20r%C3%A1pido." 
      target="_blank" rel="noopener"
      aria-label="Falar no WhatsApp"
      class="fixed right-4 bottom-5 z-40 w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-emerald-500 text-white flex items-center justify-center shadow-float hover:scale-105 active:scale-95 transition-transform group">
-     
      <span class="absolute inset-0 rounded-full bg-emerald-500 pulse-ring pointer-events-none"></span>
-
      <svg class="w-8 h-8 sm:w-9 sm:h-9 fill-current relative z-10" viewBox="0 0 24 24">
        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
      </svg>
   </a>
 
-  <!-- ==========================================
-       JAVASCRIPT LOGIC
-  ========================================== -->
   <script>
-    // Config WhatsApp Number (Numbers only)
     const WHATSAPP_NUMBER = "5544999999999";
 
-    // ==========================================
-    // LOADING SCREEN
-    // ==========================================
     (function() {
       const loadingScreen = document.getElementById('loadingScreen');
       const minTime = 800;
@@ -772,106 +532,52 @@
       function hideLoadingScreen() {
         const elapsed = Date.now() - startTime;
         const waitTime = Math.max(0, minTime - elapsed);
-
         setTimeout(() => {
           if (loadingScreen) {
             loadingScreen.classList.add('opacity-0', 'pointer-events-none');
             document.body.classList.remove('loading-active');
-            setTimeout(() => {
-              if (loadingScreen) loadingScreen.remove();
-            }, 700);
+            setTimeout(() => { if (loadingScreen) loadingScreen.remove(); }, 700);
           }
         }, waitTime);
       }
 
-      if (document.readyState === 'complete') {
-        hideLoadingScreen();
-      } else {
-        window.addEventListener('load', hideLoadingScreen);
-      }
-
+      if (document.readyState === 'complete') { hideLoadingScreen(); }
+      else { window.addEventListener('load', hideLoadingScreen); }
       setTimeout(hideLoadingScreen, 5000);
     })();
 
-    // ==========================================
-    // DYNAMIC CATALOG DATABASE
-    // Pasta img/ com fotos 1200x900 (4:3). Se falhar, mostra o SVG fallback.
-    // ==========================================
     const produtos = [
-      {
-        id: 1,
-        nome: "Sofá Modena Retrátil & Reclinável",
-        categoria: "sofas",
-        tag: "Mais Vendido",
+      { id: 1, nome: "Sofá Modena Retrátil & Reclinável", categoria: "sofas", tag: "Mais Vendido",
         descricao: "Sofá de alto padrão com assentos retráteis com mola ensacada, encosto reclinável com catraca silenciosa em 5 estágios. Revestimento em Linho Cru de alta resistência.",
-        medidas: "2,40m a 3,20m de largura",
-        imagem: "img/sofa-modena.jpg",
-        icon: `<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>`
-      },
-      {
-        id: 2,
-        nome: "Sofá Minimalista Verona 2 Lugares",
-        categoria: "sofas",
-        tag: "Pronta Entrega",
+        medidas: "2,40m a 3,20m de largura", imagem: "img/sofa-modena.jpg",
+        icon: `<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>` },
+      { id: 2, nome: "Sofá Minimalista Verona 2 Lugares", categoria: "sofas", tag: "Pronta Entrega",
         descricao: "Modelo compacto com design escandinavo, pés palito em madeira maciça e espuma D33 Soft. Perfeito para apartamentos modernos.",
-        medidas: "1,70m x 0,85m",
-        imagem: "img/sofa-verona.jpg",
-        icon: `<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>`
-      },
-      {
-        id: 3,
-        nome: "Poltrona Giratória Bella",
-        categoria: "poltronas",
-        tag: "Sob Medida",
+        medidas: "1,70m x 0,85m", imagem: "img/sofa-verona.jpg",
+        icon: `<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>` },
+      { id: 3, nome: "Poltrona Giratória Bella", categoria: "poltronas", tag: "Sob Medida",
         descricao: "Poltrona curva anatômica com base giratória em aço carbono. Design envolvente ideal para cantos de leitura ou salas de estar integradas.",
-        medidas: "0,80m x 0,80m",
-        imagem: "img/poltrona-bella.jpg",
-        icon: `<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>`
-      },
-      {
-        id: 4,
-        nome: "Pufe Baú Redondo Velvet",
-        categoria: "pufes",
-        tag: "Lançamento",
+        medidas: "0,80m x 0,80m", imagem: "img/poltrona-bella.jpg",
+        icon: `<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>` },
+      { id: 4, nome: "Pufe Baú Redondo Velvet", categoria: "pufes", tag: "Lançamento",
         descricao: "Pufe multifuncional com compartimento interno (baú), tampa estofada e acabamento em veludo toque suave com capitonê discreto.",
-        medidas: "0,50m diâmetro",
-        imagem: "img/pufe-bau.jpg",
-        icon: `<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4"/></svg>`
-      },
-      {
-        id: 5,
-        nome: "Cabeceira Imperial Queen",
-        categoria: "cabeceiras",
-        tag: "Sob Medida",
+        medidas: "0,50m diâmetro", imagem: "img/pufe-bau.jpg",
+        icon: `<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4"/></svg>` },
+      { id: 5, nome: "Cabeceira Imperial Queen", categoria: "cabeceiras", tag: "Sob Medida",
         descricao: "Cabeceira estofada em painéis verticais até o teto ou padrão cama. Fixação simplificada na parede. Variedade de tecidos antimanchas.",
-        medidas: "Casal, Queen ou King",
-        imagem: "img/cabeceira-imperial.jpg",
-        icon: `<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>`
-      },
-      {
-        id: 6,
-        nome: "Reforma Completa de Estofados",
-        categoria: "reforma",
-        tag: "Serviço Premium",
+        medidas: "Casal, Queen ou King", imagem: "img/cabeceira-imperial.jpg",
+        icon: `<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>` },
+      { id: 6, nome: "Reforma Completa de Estofados", categoria: "reforma", tag: "Serviço Premium",
         descricao: "Troca completa do revestimento, recalibração de percintas, reposição de espuma com densidade certificada e revisão da estrutura de madeira.",
-        medidas: "Qualquer modelo existente",
-        imagem: "img/reforma.jpg",
-        icon: `<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>`
-      }
+        medidas: "Qualquer modelo existente", imagem: "img/reforma.jpg",
+        icon: `<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>` }
     ];
 
-    // Labels de categoria bonitos para o modal
     const categoriaLabel = {
-      sofas: 'Sofás',
-      poltronas: 'Poltronas',
-      pufes: 'Pufes',
-      cabeceiras: 'Cabeceiras',
-      reforma: 'Reforma'
+      sofas: 'Sofás', poltronas: 'Poltronas', pufes: 'Pufes',
+      cabeceiras: 'Cabeceiras', reforma: 'Reforma'
     };
 
-    // ==========================================
-    // HEADER SCROLL EFFECT
-    // ==========================================
     const header = document.getElementById('mainHeader');
     window.addEventListener('scroll', () => {
       if (window.scrollY > 20) {
@@ -883,9 +589,6 @@
       }
     }, { passive: true });
 
-    // ==========================================
-    // MOBILE MENU DRAWER TOGGLE
-    // ==========================================
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const mobileDrawer = document.getElementById('mobileDrawer');
     const hamburgerIcon = document.getElementById('hamburgerIcon');
@@ -905,7 +608,6 @@
         document.body.style.overflow = 'hidden';
       }
     }
-
     mobileMenuBtn.addEventListener('click', toggleMobileMenu);
 
     document.querySelectorAll('.mobile-nav-link').forEach(link => {
@@ -917,50 +619,31 @@
       });
     });
 
-    // ==========================================
-    // PRODUCT GRID — 4:3, imagem real, sem preço
-    // ==========================================
     const productGrid = document.getElementById('productGrid');
 
     function renderProducts(filter = 'todos') {
       const filtered = filter === 'todos' ? produtos : produtos.filter(p => p.categoria === filter);
 
       if (filtered.length === 0) {
-        productGrid.innerHTML = `
-          <div class="col-span-full text-center py-12 text-brand-muted">
-            <p>Nenhum produto encontrado nesta categoria no momento.</p>
-          </div>`;
+        productGrid.innerHTML = `<div class="col-span-full text-center py-12 text-brand-muted"><p>Nenhum produto encontrado nesta categoria no momento.</p></div>`;
         return;
       }
 
       productGrid.innerHTML = filtered.map(p => `
         <article class="bg-brand-surface rounded-xl sm:rounded-2xl border border-brand-border overflow-hidden hover:shadow-luxury hover:border-brand-terracotta/40 transition-all duration-300 flex flex-col group cursor-pointer" onclick="openProductModal(${p.id})">
-          
-          <!-- Imagem 4:3 (retângulo deitado) com fallback SVG -->
           <div class="relative aspect-[4/3] bg-gradient-to-br from-brand-sand to-brand-copperLight/30 flex items-center justify-center overflow-hidden text-brand-terracotta">
             ${p.tag ? `<span class="absolute top-1.5 left-1.5 sm:top-3 sm:left-3 bg-brand-terracotta text-white text-[8px] sm:text-[10px] font-bold uppercase tracking-widest px-1.5 sm:px-2.5 py-0.5 sm:py-1 rounded-full shadow-sm z-10">${p.tag}</span>` : ''}
-            
-            <!-- Fallback (SVG) — só aparece se a foto não carregar -->
-            <div class="product-icon group-hover:scale-110 transition-transform duration-500">
-              ${p.icon}
-            </div>
-
-            <!-- Foto real (cobre o SVG) -->
-            <img src="${p.imagem}" 
-                 alt="${p.nome}" 
-                 loading="lazy"
+            <div class="product-icon group-hover:scale-110 transition-transform duration-500">${p.icon}</div>
+            <img src="${p.imagem}" alt="${p.nome}" loading="lazy"
                  class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                  onerror="this.style.display='none';">
           </div>
-
-          <!-- Card Info — sem preço, com CTA "Ver detalhes" -->
           <div class="p-2 sm:p-3 lg:p-5 flex flex-col flex-1 justify-between">
             <div>
               <span class="text-[8px] sm:text-[10px] font-bold uppercase tracking-widest text-brand-terracotta mb-0.5 sm:mb-1 block">${categoriaLabel[p.categoria] || p.categoria}</span>
               <h3 class="font-serif text-xs sm:text-sm lg:text-lg font-semibold text-brand-charcoal mb-1 leading-tight group-hover:text-brand-terracotta transition-colors line-clamp-2">${p.nome}</h3>
               <p class="hidden sm:block text-[10px] lg:text-xs text-brand-muted line-clamp-2 leading-relaxed mb-2">${p.descricao}</p>
             </div>
-
             <div class="pt-1.5 sm:pt-2 lg:pt-3 border-t border-brand-sand mt-auto">
               <span class="inline-flex items-center text-[9px] sm:text-[10px] lg:text-xs font-semibold uppercase tracking-wider text-brand-terracotta group-hover:text-brand-terracottaDark leading-tight">
                 Ver detalhes
@@ -972,9 +655,6 @@
       `).join('');
     }
 
-    // ==========================================
-    // FILTER BUTTONS
-    // ==========================================
     const filterButtons = document.querySelectorAll('.filter-btn');
     filterButtons.forEach(btn => {
       btn.addEventListener('click', () => {
@@ -982,17 +662,12 @@
           b.classList.remove('bg-brand-charcoal', 'text-white', 'active');
           b.classList.add('bg-brand-sand', 'text-brand-charcoalSoft');
         });
-
         btn.classList.remove('bg-brand-sand', 'text-brand-charcoalSoft');
         btn.classList.add('bg-brand-charcoal', 'text-white', 'active');
-
         renderProducts(btn.dataset.filter);
       });
     });
 
-    // ==========================================
-    // PRODUCT MODAL
-    // ==========================================
     const overlay = document.getElementById('productModalOverlay');
     const sheet = document.getElementById('productModalSheet');
     const closeModalBtn = document.getElementById('closeModalBtn');
@@ -1006,18 +681,13 @@
       document.getElementById('modalDesc').textContent = p.descricao;
       document.getElementById('modalMedidas').textContent = p.medidas;
 
-      // Visual do modal: foto por cima + ícone fallback
       document.getElementById('modalVisual').innerHTML = `
         <div class="absolute inset-0 flex items-center justify-center">
           <div class="w-20 h-20 sm:w-28 sm:h-28 [&>svg]:w-full [&>svg]:h-full">${p.icon}</div>
         </div>
-        <img src="${p.imagem}" 
-             alt="${p.nome}" 
-             class="absolute inset-0 w-full h-full object-cover" 
-             onerror="this.style.display='none';">
+        <img src="${p.imagem}" alt="${p.nome}" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none';">
       `;
 
-      // WhatsApp — sem preço na mensagem
       const msg = encodeURIComponent(`Olá! Gostaria de um orçamento para o produto: *${p.nome}*.`);
       document.getElementById('modalWhatsappBtn').href = `https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`;
 
@@ -1035,15 +705,9 @@
     }
 
     closeModalBtn.addEventListener('click', closeProductModal);
-    overlay.addEventListener('click', (e) => {
-      if (e.target === overlay) closeProductModal();
-    });
+    overlay.addEventListener('click', (e) => { if (e.target === overlay) closeProductModal(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeProductModal(); });
 
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') closeProductModal();
-    });
-
-    // Initialize
     renderProducts('todos');
   </script>
 </body>
